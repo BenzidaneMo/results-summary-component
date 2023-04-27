@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    /*Primary*/
+    --Lightred: hsl(0, 100%, 67%);
+    --Orangeyyellow: hsl(39, 100%, 56%);
+    --Greenteal: hsl(166, 100%, 37%);
+    --Cobaltblue: hsl(234, 85%, 45%);
+    /*Gradients*/
+    /*background*/
+    --LightSlateBlue: hsl(252, 100%, 67%);
+    --LightRoyalBlue: hsl(241, 81%, 54%);
+    /*circle*/
+    --VioletBlue: hsla(256, 72%, 46%, 1);
+    --PersianBlue: hsla(241, 72%, 46%, 0);
+    /*neutral*/
+    --White: hsl(0, 0%, 100%);
+    --PaleBlue: hsl(221, 100%, 96%);
+    --LightLavender: hsl(241, 100%, 89%);
+    --DarkgrayBlue: hsl(224, 30%, 27%);
+    /*fontsize*/
+    --fontsize: 18px;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    font-family: 'Hanken Grotesk',sans-serif;
+    place-items: center;
+ 
+}
+
+.container {
+    display: flex;
+    height: 24em;
+    box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.178);
+    border-radius: 15px; 
+}
+
+.resultcontainer {
+    display: grid;
+    max-width: 300px;
+    place-items: center;
+    border-radius: 15px;
+    color: var(--White);
+    background-color: var(--LightRoyalBlue);
+}
+
+.summarycontainer {
+    display: grid;
+    width: 300px;    
+}
+
+.resultcontainer .circle {
+    background-color: var(--Cobaltblue);
+    width: 140px;
+    display: grid;
+    place-items: center;
+    
+    border-radius: 50%;
+}
+
+.resultcontainer h3 {
+    color: var(--LightLavender);
+}
+
+.resultcontainer .circle p {
+    color: var(--LightLavender);
+}
+
+.resultcontainer div p {
+    color: var(--LightLavender);
+}
+
+
+.summarycontainer > * {
+    margin-left: 30px;
+}
+
+.summarycontainer p {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.summarycontainer menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+    list-style: none;
+    
+}
+
+.summarycontainer div {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.summarycontainer button {
+    width: 80%;
+    height: 40px;
+    border-style: none;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: var(--DarkgrayBlue);
+    color: var(--White);
+    padding: 10px 15;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { 
+    position: fixed;
+    font-size: 11px; 
+    text-align: center;
+    bottom: 10px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
