@@ -7,6 +7,8 @@
     --Greenteal: hsl(166, 100%, 37%);
     --Cobaltblue: hsl(234, 85%, 45%);
     /*Gradients*/
+    --tranparentred: rgba(250, 235, 215, 0.384);
+    --tranparentgreen: rgba(215, 250, 225, 0.384);
     /*background*/
     --LightSlateBlue: hsl(252, 100%, 67%);
     --LightRoyalBlue: hsl(241, 81%, 54%);
@@ -14,12 +16,18 @@
     --VioletBlue: hsla(256, 72%, 46%, 1);
     --PersianBlue: hsla(241, 72%, 46%, 0);
     /*neutral*/
+    --paragraphgray: hsla(214, 8%, 83%, 0.664);
     --White: hsl(0, 0%, 100%);
     --PaleBlue: hsl(221, 100%, 96%);
     --LightLavender: hsl(241, 100%, 89%);
     --DarkgrayBlue: hsl(224, 30%, 27%);
+    --LightDarkgrayBlue: hsla(224, 30%, 27%, 0.555);
     /*fontsize*/
     --fontsize: 18px;
+}
+
+* {
+    box-sizing: border-box
 }
 
 body {
@@ -32,31 +40,34 @@ body {
 
 .container {
     display: flex;
-    height: 24em;
-    box-shadow: 2px 1px 15px rgba(0, 0, 0, 0.178);
-    border-radius: 15px; 
+    height: 26em;
+    box-shadow: 10px 20px 25px rgba(2, 90, 86, 0.068);
+    border-radius: 25px; 
 }
 
 .resultcontainer {
     display: grid;
-    max-width: 300px;
     place-items: center;
-    border-radius: 15px;
+    width: 300px;
+    border-radius: 25px;
     color: var(--White);
     background-color: var(--LightRoyalBlue);
 }
 
 .summarycontainer {
     display: grid;
-    width: 300px;    
+    width: 300px;
+    border-radius: 25px;
 }
 
 .resultcontainer .circle {
-    background-color: var(--Cobaltblue);
-    width: 140px;
+    background: linear-gradient(var(--VioletBlue),var(--PersianBlue));
+    width: 10em;
+    height: 10em;
     display: grid;
     place-items: center;
-    
+    border-style: none;
+    margin-top: -20px;
     border-radius: 50%;
 }
 
@@ -65,63 +76,141 @@ body {
 }
 
 .resultcontainer .circle p {
-    color: var(--LightLavender);
+    color: var(--paragraphgray);
+}
+
+.resultcontainer .circle span {
+    font-size: 56px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: -50px;
+}
+
+.resultcontainer div {
+    text-align: center;
+    margin: 0 40px;
+}
+
+.resultcontainer div h4 {
+    font-size: 24px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    
 }
 
 .resultcontainer div p {
+    font-size: 15px;
     color: var(--LightLavender);
 }
+
 
 
 .summarycontainer > * {
     margin-left: 30px;
 }
 
-.summarycontainer p {
+.summarycontainer h4 {
     margin-top: 15px;
+    color: var(--DarkgrayBlue);
     font-size: 20px;
-}
-
-.summarycontainer menu {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: space-between;
-    list-style: none;
+    font-weight: 700;
+    margin-bottom: 15px;
     
 }
 
 .summarycontainer div {
-    width: 220px;
+    width: 240px;
+    height: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 0;
+    
 }
 
+.summarycontainer div:nth-child(2) {
+    background-color: var(--tranparentred);
+}
+.summarycontainer div:nth-child(3) {
+    background-color: var(--tranparentred);
+}
+.summarycontainer div:nth-child(4) {
+    background-color: var(--tranparentgreen);
+}
+.summarycontainer div:nth-child(5) {
+    background-color: var(--tranparentgreen);
+}
 
+.summarycontainer div .righttt {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6em;
+    margin-right: 10px;
+}
+
+.summarycontainer div .righttt p {
+    color: var(--LightDarkgrayBlue);
+    font-size: 18px;
+}
+
+.summarycontainer div .righttt b {
+    color: var(--DarkgrayBlue);
+}
+
+.summarycontainer div img {
+    width: 20px;
+}
+
+.summarycontainer div .lefff {
+    display: flex;
+    gap: .7rem;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.summarycontainer div:nth-child(2) .lefff {
+    color: var(--Lightred);
+}
+.summarycontainer div:nth-child(3) .lefff {
+    color: var(--Orangeyyellow);
+}
+.summarycontainer div:nth-child(4) .lefff {
+    color: var(--Greenteal);
+}
+.summarycontainer div:nth-child(5) .lefff {
+    color: var(--VioletBlue);
+}
 
 .summarycontainer button {
     width: 80%;
-    height: 40px;
+    height: 50px;
+    font-size: 16px;
     border-style: none;
-    border-radius: 20px;
+    border-radius: 25px;
     font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     background-color: var(--DarkgrayBlue);
     color: var(--White);
-    padding: 10px 15;
+    
 }
 
+.summarycontainer button:hover {
+    cursor:pointer ;
+    background-color: var(--LightRoyalBlue);
+    transition: ease-in;
+    transition-duration: .2s;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.summarycontainer button:active {
+    transform: scale(0.98);
+}
 
 .attribution { 
     position: fixed;
@@ -132,3 +221,43 @@ body {
 .attribution a {
     color: hsl(228, 45%, 44%);
 }
+
+@media screen and (max-width: 468px) {
+    
+    .container {
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+    
+    }
+    .resultcontainer {
+        box-sizing: border-box;
+        width: 100vw;
+        height: 25em;
+        border-radius: 0 0 25px 25px;
+        margin: -10px -10px 10px -10px;
+    }
+    .summarycontainer {
+        width: 100vw;
+    } 
+    .summarycontainer div {
+        margin-bottom: 15px;
+    }
+    .summarycontainer button {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    .summarycontainer div, .summarycontainer button {
+        width: 90vw;
+    }
+    .summarycontainer > * {
+        margin-left: 15px;
+    }
+    .attribution {
+        position: relative;
+    }
+
+}
+
+
+
